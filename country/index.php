@@ -18,10 +18,10 @@ function get_records()
     $sqlRegion = 'SELECT Region_Name FROM Classificator_Region';
     $data = array();
     foreach ($dbh->query($sqlCountry) as $row) {
-        $data['country'] .= "<option value=" . $row['Country_ID'] . ">" . $row['Country_Name'] . "</option>";
+        $data['country'][$row['Country_ID']] = $row['Country_Name'];
     }
     foreach ($dbh->query($sqlRegion) as $row) {
-        $data['city'] .= "<option>" . $row['Region_Name'] . "</option>";
+        $data['city'][] = $row['Region_Name'];
     }
     return $data;
 }

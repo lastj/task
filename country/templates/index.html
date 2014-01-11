@@ -12,14 +12,22 @@
             <form id="country">
                 <select size="20"
                         onchange="if(this.options[this.selectedIndex].value == 165){document.getElementById('city').style.display='block';}">
-                    <?=$data['country'];?>
+                    <?
+                        foreach($data['country'] as $key => $value){
+                            echo "<option value=" . $key . ">" . $value . "</option>";
+                        }
+                    ?>
                 </select>
             </form>
         </td>
         <td>
             <form id="city">
                 <select size="20">
-                    <?=$data['city']?>
+                    <?
+                        foreach($data['city'] as $key => $value){
+                            echo "<option>" . $value . "</option>";
+                        }
+                    ?>
                 </select>
             </form>
         </td>
