@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Country</title>
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+</head>
+<body>
+<table>
+    <tr>
+        <td>
+            <form id="country">
+                <select size="20"
+                        onchange="if(this.options[this.selectedIndex].value == 165){document.getElementById('city').style.display='block';}">
+                    <?=$data['country'];?>
+                </select>
+            </form>
+        </td>
+        <td>
+            <form id="city">
+                <select size="20">
+                    <?=$data['city']?>
+                </select>
+            </form>
+        </td>
+    </tr>
+</table>
+</body>
+</html>
+

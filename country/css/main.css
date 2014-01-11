@@ -1,0 +1,11 @@
+#city {
+    display: none;
+}
+
+#city option:first-child {
+    color: red;
+}
+
+#city option:nth-child(2) {
+    color: blue;
+}
